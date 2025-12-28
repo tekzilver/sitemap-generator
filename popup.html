@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <style>
+    body {
+      width: 350px;
+      font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+      padding: 15px;
+      background-color: #f4f4f4;
+      margin: 0;
+    }
+    h2 {
+      margin-top: 0;
+      color: #333;
+      font-size: 18px;
+      text-align: center;
+      border-bottom: 2px solid #007bff;
+      padding-bottom: 10px;
+    }
+    .input-group {
+      margin-bottom: 15px;
+    }
+    input[type="url"] {
+      width: 100%;
+      padding: 8px;
+      box-sizing: border-box;
+      border: 1px solid #ccc;
+      border-radius: 4px;
+      margin-bottom: 5px;
+    }
+    button {
+      width: 100%;
+      padding: 10px;
+      background-color: #007bff;
+      color: white;
+      border: none;
+      border-radius: 4px;
+      cursor: pointer;
+      font-weight: bold;
+      transition: background 0.3s;
+    }
+    button:hover {
+      background-color: #0056b3;
+    }
+    button:disabled {
+      background-color: #ccc;
+      cursor: not-allowed;
+    }
+    /* Progress Bar Styles */
+    #progress-container {
+      margin-top: 15px;
+      display: none;
+    }
+    progress {
+      width: 100%;
+      height: 20px;
+      border-radius: 5px;
+    }
+    #progress-text {
+      font-size: 12px;
+      color: #555;
+      text-align: center;
+      margin-top: 2px;
+    }
+    
+    #status {
+      margin-top: 15px;
+      font-size: 13px;
+      color: #666;
+      min-height: 20px;
+      text-align: center;
+    }
+    .footer {
+      margin-top: 20px;
+      text-align: center;
+      font-size: 12px;
+      color: #555;
+      border-top: 1px solid #ddd;
+      padding-top: 10px;
+      font-weight: 600;
+    }
+  </style>
+</head>
+<body>
+
+  <h2>Sitemap Generator</h2>
+
+  <div class="input-group">
+    <!-- Updated placeholder for user friendliness -->
+    <input type="url" id="urlInput" placeholder="https://example.com" />
+  </div>
+
+  <button id="generateBtn">Generate XML Sitemap</button>
+
+  <div id="progress-container">
+    <progress id="progressBar" value="0" max="100"></progress>
+    <div id="progress-text">0%</div>
+  </div>
+
+  <div id="status">Ready to start.</div>
+
+  <div class="footer">
+    Provided by Tekzilver
+  </div>
+
+  <script src="popup.js"></script>
+</body>
+</html>
